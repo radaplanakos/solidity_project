@@ -15,7 +15,7 @@ contract Storage {
      * @dev Store value in variable
      * @param num value to store
      */
-    function store(uint256 num) public {
+    function store(uint256 num) public virtual{
         number = num;
     }
 

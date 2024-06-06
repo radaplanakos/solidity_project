@@ -119,7 +119,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/SimpleStorage.sol": "SimpleStorage"
+			"contracts/ExtraStorage.sol": "ExtraStorage"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -133,6 +133,14 @@
 		"remappings": []
 	},
 	"sources": {
+		"contracts/ExtraStorage.sol": {
+			"keccak256": "0xa5a686e128bf7009c39df7afba2d404a50fe6c9d8626a9e065eb0560a26b57bb",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2ae5306c760dfdf2ef23208f6a5cff26563d256b9cf1f7797e669e26fb0f6bb4",
+				"dweb:/ipfs/QmewfPKEzdAef1mEqtZZoYCzET6wXEoThmhK6TkedCjcrA"
+			]
+		},
 		"contracts/SimpleStorage.sol": {
 			"keccak256": "0xd76b7e5cd7d6bfc97bc4cacdb7036bcc6782f0bb0e4ac23835e12aec6d0df583",
 			"license": "MIT",

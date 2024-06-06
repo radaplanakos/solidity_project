@@ -4,10 +4,25 @@ pragma solidity ^0.8.7; // version
 import "./SimpleStorage.sol"; 
 
 contract StorageFactory{
-    SimpleStorage public simplestorage;
+    SimpleStorage[] public simpleStorageArray;
 
     function createSimpleStorageContract() public {
-        simplestorage= new SimpleStorage();
+        SimpleStorage simpleStorage= new SimpleStorage();
+        simpleStorageArray.push(simpleStorage);
+    }
+    function sfStore(uint256 _simpleStorageIndex, uint256 _simpleStorageNumber) public {
+        //Address
+        //ABI - Application Binary Interface
+        SimpleStorage simpleStorage=simpleStorageArray[_simpleStorageIndex];
+        simpleStorage.store(_simpleStorageNumber);
+        //simpleStorageArray[_simpleStorageIndex].store(_simpleStorageIndex);
+    }
+    
+    function sfGet(uint256 _simpleStorageIndex) public view returns(uint256){
+        SimpleStorage simpleStorage=simpleStorageArray[_simpleStorageIndex];
+        return simpleStorage.retrieve();
+        // return simpleStorageArray[_simpleStorageIndex].retrieve();
+
     }
 
 }
