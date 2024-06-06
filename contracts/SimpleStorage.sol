@@ -4,6 +4,9 @@ pragma solidity ^0.8.7; // version
 contract SimpleStorage {
 
     uint256 public favoriteNumber;
+
+
+    mapping(string => uint256) public nametoFavoriteNumber;
     People[] public people;
 
     struct People{
@@ -21,6 +24,7 @@ contract SimpleStorage {
 
     function addPerson(string memory _name, uint256 _favoriteNumber) public {
         people.push(People(_favoriteNumber, _name));
+        nametoFavoriteNumber[_name]=_favoriteNumber;
     }
 
 }
